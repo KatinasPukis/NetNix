@@ -1,0 +1,16 @@
+﻿@model NetNix.Models.Movies
+
+
+<div>
+    <h1>@Model.Name</h1>
+    <h3 style="float:right">@Html.ActionLink("Likes", "Like", new { id = Model.Id })</h3>
+    <img src="@Model.image" />
+    <h3>Release date:</h3>
+    <h3>@Model.releaseDate</h3>
+    <strong>@Model.shortDescription</strong>
+    <p>@Model.description</p>
+    <h3>Director:</h3>
+    <h3>@Html.ActionLink(@Model.director.name, "Director", new { id = Model.Id })</h3>
+
+</div>
+
